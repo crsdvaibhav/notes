@@ -1,0 +1,20 @@
+- In functional programming we dont muatate state, instead we define transformations which we chain 
+to get the desired result. 
+- Functions are both algorithm and data (can be passed around)
+- FP is declaritive (we just specify what we want instead of how we will get them)
+- Mostly functions are immutable and have no side effects
+
+- Think of functions as pipes, with some input and some output, and is deterministic. They also 
+must have output for every input. They must be pure(do not interact with outside).
+- Referential tansparency means we always replace a function with its definition.
+
+- Function composition: If the range of one funciton is the subset of the domain of other then we 
+can compose them. And due to Referential tansparency we can always replace this new function with
+its definition and thus make a generic compose(f1,f2) method which takes two functions and returns
+their composition
+- Always a good practice to define function signature before the function
+
+- Function in FP recieve only 1 input, so when we want to deal with multiple parameters, we do
+currying (we pass the 1st parameter and return second parameter as function [which adds 1st to it])
+ex. sum(a,b) => a+b can be written as sum(a) { (b)=>a+b } / sum(a) => (b) => a+b
+- FP is just 1 big formula as = is equality not assignment.
