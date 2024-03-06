@@ -18,3 +18,14 @@ their composition
 currying (we pass the 1st parameter and return second parameter as function [which adds 1st to it])
 ex. sum(a,b) => a+b can be written as sum(a) { (b)=>a+b } / sum(a) => (b) => a+b
 - FP is just 1 big formula as = is equality not assignment.
+
+- No loops in FP, we use recursion
+
+- Null values are a problem, lets say we have a divide function and to handle / by 0, we use Null
+but while composing it with other func say increment, we have to take care of null in the domain 
+of increment, so anyone else implementing increment may miss it out and thus it would be big mistake
+So, to overcome this problem we can define a 'maybe' domain, where maybetype = type + null. Now this
+is implemented by Some (just a wrapper around variables with values) and None type (wrapper for 
+variables with no values), we use these two to form an Option type which provides an Option between
+
+
